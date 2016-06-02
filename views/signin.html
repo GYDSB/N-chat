@@ -1,24 +1,112 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>登陆</title>
-<link type="text/css" rel="stylesheet" href="stylesheets/signin.css">
-<link type="text/css" rel="stylesheet" href="stylesheets/common.css">
+    <meta charset="utf-8">
+    <title>登陆</title>
+    <!--<link type="text/css" rel="stylesheet" href="stylesheets/signin.css">-->
+    <!--<link type="text/css" rel="stylesheet" href="stylesheets/common.css">-->
+    <style>
+        @keyframes showBox {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes showBox {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        #main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            /*background-color: ;*/
+        }
+        .form-group{
+            /*border: 1px solid black;*/
+            border-radius: 1em;
+            padding: 2em;
+            text-align: center;
+            background-color: whitesmoke;
+            box-shadow: 10px 10px 10px #8c8c8c;
+            animation:showBox 1s;
+            animation-iteration-count:1;
+        }
+        .form_line{
+            margin-top: 2em;
+            display: flex;
+            justify-content: center;
+        }
+        input[type=text]{
+            font-size: larger;
+            padding: 0.2em 0.5em;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+            font-family: "Microsoft YaHei UI";
+
+        }
+        label{
+            font-family: "Microsoft YaHei UI";
+            margin-right:2em;
+            font-size: large;
+        }
+        .form_line>button{
+            font-size: 1em;
+            padding: 0.5em 2em;
+            margin: 1em 2em;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background-color: #15aa9a;
+            color: white;
+            font-family: "Microsoft YaHei UI";
+        }
+        .form_line>button:hover{
+            background-color: #108175;
+        }
+    </style>
 </head>
 <body>
-  <div id="content">
-    <form style="margin-top:70px;" method="post">
-      <div class="form_line">
-        <div class="form_label">昵称：</div>
-        <input type="text" name="name" />
-      </div>
-      <div class="form_line">
-        <div class="form_label"></div>
-        <button class="button gray" type="submit">登录</button>
-        <button class="button gray" type="reset">取消</button>
-      </div>
-    </form>
-  </div>
+<div id="main">
+    <div class="form-group">
+        <h2>欢迎来到多人在线聊天室</h2>
+        <form style="margin-top:70px;" method="post">
+            <div class="form_line">
+                <label for="inputName">昵称 :</label>
+                <input type="text" name="name" id="inputName" autocomplete="off"
+                       placeholder="请输入登录昵称" required>
+
+            </div>
+            <div class="form_line">
+                <button  type="submit">登录</button>
+                <button  type="reset">取消</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<!--<div id="content">-->
+    <!--<form style="margin-top:70px;" method="post">-->
+        <!--<div class="form_line">-->
+            <!--<div class="form_label">昵称：</div>-->
+            <!--<input type="text" name="name"/>-->
+        <!--</div>-->
+        <!--<div class="form_line">-->
+            <!--<div class="form_label"></div>-->
+            <!--<button class="button gray" type="submit">登录</button>-->
+            <!--<button class="button gray" type="reset">取消</button>-->
+        <!--</div>-->
+    <!--</form>-->
+<!--</div>-->
 </body>
 </html>
